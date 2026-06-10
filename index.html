@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Paulinha ??</title>
+<title>For Paulinha â¤ï¸</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
     :root {
@@ -117,7 +117,6 @@
         transition: all 0.4s ease;
     }
 
-    /* Corações flutuantes */
     .heart {
         position: absolute;
         font-size: 22px;
@@ -139,7 +138,6 @@
         }
     }
 
-    /* Responsividade */
     @media (max-width: 480px) {
         .card {
             padding: 32px 20px;
@@ -161,38 +159,38 @@
              alt="Paula">
     </div>
     
-    <h1>Hey Paulinha ??</h1>
+    <h1>Hey Paulinha â¤ï¸</h1>
     <p>
         I just wanted to create something small for you.<br>
-        <strong>You’re not just someone I talk to anymore, you’re my favorite person and my happy place ??.</strong>
+        <strong>Youâ€™re not just someone I talk to anymore, youâ€™re my favorite person and my happy place â¤ï¸.</strong>
     </p>
 
     <button onclick="showMessage()">
-        Don’t be shy… click me ??
+        Donâ€™t be shyâ€¦ click me ğŸ˜Œ
     </button>
 
     <p id="message">
-        Click the button many times and see the magic ??
+        Click the button many times and see the magic â¤ï¸
     </p>
 </div>
 
 <script>
 const messages = [
-    "I hope you’re smiling right now ????",
-    "You’re kind of my favorite notification ??",
-    "If you were here, I’d probably be staring at you ??",
-    "You make simple moments feel special ?",
-    "Just in case you forgot… you’re amazing ??",
-    "I like the way you exist ????",
-    "You’re lowkey becoming my favorite habit ??",
-    "Still clicking? I like your curiosity ??",
-    "This is your reminder that you’re beautiful ??",
-    "I hope your heart felt that one ??",
-    "You’ve got my attention… and maybe more ??",
-    "Okay stop… you’re making me smile now ??",
-    "Every click = me thinking about you ??",
-    "You’re dangerously easy to like ????",
-    "I should probably stop, but I won’t ??"
+    "I hope youâ€™re smiling right now ğŸ˜Šâ¤ï¸",
+    "Youâ€™re kind of my favorite notification ğŸ’•",
+    "If you were here, Iâ€™d probably be staring at you ğŸ˜Œ",
+    "You make simple moments feel special âœ¨",
+    "Just in case you forgotâ€¦ youâ€™re amazing â¤ï¸",
+    "I like the way you exist ğŸ˜ğŸ’•",
+    "Youâ€™re lowkey becoming my favorite habit ğŸ˜Œ",
+    "Still clicking? I like your curiosity ğŸ˜„",
+    "This is your reminder that youâ€™re beautiful â¤ï¸",
+    "I hope your heart felt that one ğŸ’Œ",
+    "Youâ€™ve got my attentionâ€¦ and maybe more ğŸ˜",
+    "Okay stopâ€¦ youâ€™re making me smile now ğŸ˜Š",
+    "Every click = me thinking about you â¤ï¸",
+    "Youâ€™re dangerously easy to like ğŸ˜ŒğŸ’•",
+    "I should probably stop, but I wonâ€™t ğŸ˜"
 ];
 
 let current = 0;
@@ -205,8 +203,6 @@ function showMessage() {
         msgElement.innerText = messages[current];
         current = (current + 1) % messages.length;
         msgElement.style.opacity = 1;
-        
-        // Animação de coração
         createHeart();
     }, 250);
 }
@@ -214,20 +210,15 @@ function showMessage() {
 function createHeart() {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.textContent = ["??", "??", "??", "??"][Math.floor(Math.random()*4)];
-    
-    // Posição aleatória na tela
+    heart.textContent = ["â¤ï¸", "ğŸ’•", "ğŸ’—", "ğŸ’–"][Math.floor(Math.random()*4)];
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.bottom = "-30px";
     heart.style.fontSize = (18 + Math.random() * 18) + "px";
-    
     document.body.appendChild(heart);
-    
-    // Remove após animação
     setTimeout(() => heart.remove(), 3500);
 }
 
-// Corações iniciais
+// CoraÃ§Ãµes iniciais
 setTimeout(() => createHeart(), 600);
 setTimeout(() => createHeart(), 1200);
 </script>
