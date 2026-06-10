@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Paulinha ??</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --pink: #ff4d94;
+        --rose: #ff6b9d;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: linear-gradient(135deg, #1a0f1f, #0f0f1a);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 15px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card {
+        max-width: 680px;
+        width: 100%;
+        background: rgba(20, 20, 35, 0.92);
+        backdrop-filter: blur(16px);
+        border-radius: 28px;
+        padding: 40px 30px;
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 107, 157, 0.2);
+        position: relative;
+        z-index: 2;
+    }
+
+    .image-container {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 28px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(255, 77, 148, 0.35);
+        border: 5px solid var(--rose);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.4s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 16px;
+        background: linear-gradient(90deg, #ff4d94, #ff9ec1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.65;
+        color: #e0d0e0;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, var(--pink), #ff8ab3);
+        color: white;
+        padding: 14px 32px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 8px 20px rgba(255, 77, 148, 0.35);
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(255, 77, 148, 0.45);
+    }
+
+    #message {
+        text-align: center;
+        min-height: 70px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #ffd4e6;
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 107, 157, 0.2);
+        transition: all 0.4s ease;
+    }
+
+    /* Corações flutuantes */
+    .heart {
+        position: absolute;
+        font-size: 22px;
+        color: #ff4d94;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+        animation: floatHeart 3.2s ease forwards;
+    }
+
+    @keyframes floatHeart {
+        0% {
+            transform: translateY(0) scale(0.6);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-180px) scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+        .card {
+            padding: 32px 20px;
+        }
+        h1 {
+            font-size: 2.1rem;
+        }
+        .image-container {
+            width: 160px;
+            height: 160px;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="image-container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9KxQM4uLEpHrrC1OHxOyYlN07mk1v2nnyp-DDWNK8nfeSXHO6zdXN3HYzN84Zp5lYsDtAoCB1j5bnfzORFShFpjq5dxC3ztbbQy-tVt_95ok0CTbRK76FReNht6lLGqv6_6Xe7uZTwLhEYmrAASfRL8NxH0SpaL1ZfPZogU2amljws7SrGh7Zh5eS-XhA/s1474/1003239331.jpg" 
+             alt="Paula">
+    </div>
+    
+    <h1>Hey Paulinha ??</h1>
+    <p>
+        I just wanted to create something small for you.<br>
+        <strong>You’re not just someone I talk to anymore, you’re my favorite person and my happy place ??.</strong>
+    </p>
+
+    <button onclick="showMessage()">
+        Don’t be shy… click me ??
+    </button>
+
+    <p id="message">
+        Click the button many times and see the magic ??
+    </p>
+</div>
+
+<script>
+const messages = [
+    "I hope you’re smiling right now ????",
+    "You’re kind of my favorite notification ??",
+    "If you were here, I’d probably be staring at you ??",
+    "You make simple moments feel special ?",
+    "Just in case you forgot… you’re amazing ??",
+    "I like the way you exist ????",
+    "You’re lowkey becoming my favorite habit ??",
+    "Still clicking? I like your curiosity ??",
+    "This is your reminder that you’re beautiful ??",
+    "I hope your heart felt that one ??",
+    "You’ve got my attention… and maybe more ??",
+    "Okay stop… you’re making me smile now ??",
+    "Every click = me thinking about you ??",
+    "You’re dangerously easy to like ????",
+    "I should probably stop, but I won’t ??"
+];
+
+let current = 0;
+
+function showMessage() {
+    const msgElement = document.getElementById("message");
+    msgElement.style.opacity = 0;
+    
+    setTimeout(() => {
+        msgElement.innerText = messages[current];
+        current = (current + 1) % messages.length;
+        msgElement.style.opacity = 1;
+        
+        // Animação de coração
+        createHeart();
+    }, 250);
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = ["??", "??", "??", "??"][Math.floor(Math.random()*4)];
+    
+    // Posição aleatória na tela
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "-30px";
+    heart.style.fontSize = (18 + Math.random() * 18) + "px";
+    
+    document.body.appendChild(heart);
+    
+    // Remove após animação
+    setTimeout(() => heart.remove(), 3500);
+}
+
+// Corações iniciais
+setTimeout(() => createHeart(), 600);
+setTimeout(() => createHeart(), 1200);
+</script>
+</body>
+</html>
